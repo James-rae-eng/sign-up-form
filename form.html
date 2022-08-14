@@ -8,25 +8,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar"> 
-        <h1>Main logo</h1>
-        <img class="forest" src="../images/forest.jpg" alt="Image of forest">
-    </div>
-
-    <div class="intro">
-        text goes here
-    </div>
-
-    <div class="main">
-        <h1>Form header</h1>
-        
+    <div class="sidebar">
+        <h1>Oceana</h1>
+        <div class="photo_credit">Photo by <a href="https://unsplash.com/@jonnysplsh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonny Caspari</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div> 
         
     </div>
 
-    <div class="account_info">
-        <h2>create account</h2>
-        <button class="account_btn">Create account</button>
-    </div>
+    <div class="rightSide">
+        <div class="intro">
+            Are you ready for your next holiday? Want something a little different?
+            Explore all water related options, whether you want to be out on the mediteranian ocean,
+            on a peaceful lake or faling down rapids, we've got it all. 
+            <br><br>
+            Ready to start your adventure?
+        </div>
 
+        <div class="main">
+            <h2>Sign up</h2>
+            <form action="Example/path">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="first_name">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="last_name">
+
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="email">
+
+                <label for="phoneNumber"></label>
+                <input type="number" id="phoneNUmber" name="phone_number" placeholder="07123456790">
+
+                <label for="userPassword">Password</label>
+                <input type="password" id="userPassword" name="password" placeholder="Goodpw1">
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirm_password" placeholder="Goodpw1">
+
+                <button type="submit" class="account_btn">Create account</button>
+            </form>
+        </div>
+
+        <div class="accountInfo">
+            <h3>Already have an account? <a href="Na">Log in</a> </h3>
+        </div>
+    </div>
 </body>
 </html>
