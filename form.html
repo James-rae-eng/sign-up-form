@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
     <div class="sidebar">
@@ -25,7 +26,7 @@
 
         <div class="main">
             <h2>Sign up</h2>
-            <form action="Example/path">
+            <form>
                 <div class="formRow">
                     <div class="formElement">
                         <label for="firstName">First Name:</label>
@@ -51,11 +52,16 @@
                 <div class="formRow">
                     <div class="formElement">
                         <label for="userPassword">Password</label>
-                        <input type="password" id="userPassword" name="password" placeholder="Goodpw1" required minlength="6">
+                        <input type="password" id="userPassword" name="password" placeholder="Goodpw1" 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Password must contain at least one number, one uppercase & lowercase letter, and at least 6 characters" 
+                        onblur="verifyPassword()" required>
+                        <span id="pwMsg">Password must:<br>
+                            -Contain one number & one uppercase letter<br>
+                            -Be at least 6 characters.</span>
                     </div>
                     <div class="formElement">
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" name="confirm_password" placeholder="Goodpw1" required>
+                        <input type="password" id="confirmPassword" name="confirm_password" placeholder="Goodpw1" onblur="matchPassword()" required>
                     </div>
                 </div>
 

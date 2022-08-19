@@ -90,7 +90,7 @@ label::after {
   color: rgb(248, 199, 159)
 }
 
-/*remove asterisk as not required*/
+/*remove asterisk for this input as it's not required*/
 label[for=phoneNumber]::after {
   content: none;
 }
@@ -108,6 +108,16 @@ label[for=phoneNumber]::after {
 
 .accountInfo {
   margin: 10px 0px 0px 50px;
+}
+
+
+/*This handles the showing of the password criteria on */
+#userPassword + span {
+  display: none;
+}
+#userPassword:hover + span {
+  display: flex;
+  width: 185px;
 }
 
 a {
